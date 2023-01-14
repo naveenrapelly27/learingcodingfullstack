@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        h2 {
+            border: 2px solid red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            background-color: aqua;
+        }
+
+        /* div inside p then this CSS will be applied */
+        /* div p {
+            color: green;
+            font-weight: bold;
+        } */
+
+        /* if p is right inside div then this CSS will be applied */
+        /* div>p {
+            background-color: blue;
+        } */
+
+        /* if p is right after div i.e p is the next sibling of div*/
+        div+p {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Selectors in CSS</h2>
+    <div class="container">
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>

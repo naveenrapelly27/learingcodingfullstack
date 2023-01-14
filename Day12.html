@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow and variable creation</title>
+    <style>
+        /* varibale creation this is global variable creation */
+        :root {
+            --background-color: rgb(96, 96, 153);
+            --color: white;
+        }
+
+        .container {
+            border: 2px solid red;
+            display: flex;
+        }
+
+        .box {
+            /* Variable creation in local which can be accessed into this box only */
+            /* --background-color: rgb(96, 96, 153);
+            --color: white; */
+            border: 2px solid orange;
+            margin: 13px 10px;
+            padding: 12px 20px;
+            background-color: var(--background-color);
+            color: var(--color);
+
+            /* syntax : box-shadow : offset-X,offset-Y,blur-radius,spread-radius,color; */
+            /* box-shadow: 10px 9px orchid; */
+            /* box-shadow: -10px -9px orchid; */
+            /* box-shadow: -100px -29px -300px -200px orchid; */
+            /* box-shadow: inset 2px 2px green; */
+            box-shadow: 3px 3px green, 2px 2px yellow;
+
+        }
+
+        .box h3 {
+            text-shadow: 1px 1px yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>First Box</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, minus amet? Maiores harum blanditiis
+                id quasi rerum et alias, incidunt voluptatem nam consequuntur est exercitationem enim ullam sint,
+                quaerat provident ex debitis quos! Odit.</p>
+        </div>
+        <div class="box">
+            <h3>Second Box</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fuga aspernatur consequuntur voluptatem.
+                Optio in magni beatae voluptas temporibus, sapiente nobis aut, quod, illo nihil impedit odit! Tempora
+                illo voluptates provident laborum laudantium eius?</p>
+        </div>
+        <div class="box">
+            <h3>Third Box</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum unde earum animi itaque est quo suscipit rem
+                maiores iusto, incidunt quod excepturi eos vitae dolor, iste tempora facilis, libero qui ex nobis modi
+                doloribus.</p>
+        </div>
+    </div>
+</body>
+
+</html>
